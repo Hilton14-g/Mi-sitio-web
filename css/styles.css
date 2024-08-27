@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Un color de fondo claro */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#noButton, #yesButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#secondScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#sunflower {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.petalo {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform-origin: center bottom;
+    animation: grow 1s forwards;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100px;
+        height: 60px;
+        opacity: 1;
+    }
+}
